@@ -7,7 +7,7 @@ import java.time.LocalDateTime;
 @Data
 @TableName("public.course_attendance")
 public class CourseAttendanceEntity {
-    
+
     public enum AttendanceStatus {
         PRESENT("已到"),
         ABSENT("未到"),
@@ -45,7 +45,7 @@ public class CourseAttendanceEntity {
 
     @TableField(exist = false)
     private CourseReservationEntity student;
-    
+
     @TableField(exist = false)
     private CourseScheduleEntity schedule;
-} 
+}

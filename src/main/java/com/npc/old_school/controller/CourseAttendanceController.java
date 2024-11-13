@@ -74,4 +74,4 @@ public class CourseAttendanceController {
     public ResultResponse getScheduleAttendance(@Valid ScheduleAttendanceQueryDTO queryDTO) {
         return ResultResponse.success(attendanceService.getScheduleAttendance(queryDTO));
     }
-} 
+}

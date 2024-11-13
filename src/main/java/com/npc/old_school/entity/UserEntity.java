@@ -22,16 +22,16 @@ public class UserEntity {
     private String district;
     private Long serviceSiteId;
     private Boolean status;
-    
+
     @TableField(exist = false)
     private RoleEntity role;
-    
+
     @TableField(fill = FieldFill.INSERT)
     private LocalDateTime createdAt;
-    
+
     @TableField(fill = FieldFill.INSERT_UPDATE)
     private LocalDateTime updatedAt;
-    
+
     @TableLogic
     private Boolean isDeleted;
-} 
+}
