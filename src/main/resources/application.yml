@@ -69,3 +69,14 @@ server:
 upload:
   path: D:\Code\Java\old-school\logs\upload
   max-size: 10485760 # 10MB
+
+springdoc:
+  api-docs:
+    enabled: true
+    path: /api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    tags-sorter: alpha
+    operations-sorter: alpha
+  show-actuator: false
+  packages-to-scan: com.npc.old_school.controller
