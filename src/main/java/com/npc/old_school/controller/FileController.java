@@ -30,15 +30,15 @@ public class FileController {
             if (path.contains("..")) {
                 throw new BusinessException(HttpStatus.BAD_REQUEST, "文件路径包含非法字符");
             }
-            
+
             // 构建文件完整路径
             Path filePath = Paths.get(uploadPath).resolve(path).normalize();
-            
+
             // 验证最终路径是否仍在uploadPath目录下（安全检查）
             if (!filePath.startsWith(Paths.get(uploadPath))) {
                 throw new BusinessException(HttpStatus.BAD_REQUEST, "非法的文件访问路径");
             }
-            
+
             Resource resource = new UrlResource(filePath.toUri());
 
             // 检查文件是否存在
@@ -48,7 +48,7 @@ public class FileController {
 
             // 设置响应头
             String contentDisposition = "attachment; filename=\"" + resource.getFilename() + "\"";
-            
+
             return ResponseEntity.ok()
                     .contentType(MediaType.APPLICATION_OCTET_STREAM)
                     .header(HttpHeaders.CONTENT_DISPOSITION, contentDisposition)

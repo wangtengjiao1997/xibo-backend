@@ -20,11 +20,14 @@ public class EmployeeController {
     @Autowired
     private EmployeeService employeeService;
 
+    @GetMapping("/relateAccount/{userid}")
+    public ResultResponse getRelateAccountUid(@PathVariable String userid) {
+        return ResultResponse.success(employeeService.getRelateAccountUid(userid));
+    }
+
     @PostMapping
-    public ResultResponse create(@Valid @RequestPart("data") EmployeeDTO employeeDTO,
-            @RequestPart(value = "images", required = false) MultipartFile image) throws IOException {
-        return ResultResponse.success(employeeService.createEmployee(employeeDTO,
-                image));
+    public ResultResponse create() throws IOException {
+        return ResultResponse.success(employeeService.createEmployee());
     }
 
     @GetMapping("/{id}")
@@ -45,4 +48,10 @@ public class EmployeeController {
         employeeService.deleteEmployee(id);
         return ResultResponse.success();
     }
+
+    @GetMapping
+    public ResultResponse getAllEmployees() {
+        return ResultResponse.success(employeeService.getAllEmployees());
+    }
+
 }

@@ -1,5 +1,6 @@
 package com.npc.old_school.entity;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 
@@ -13,10 +14,12 @@ public class Employee {
     private Long id;
     private String name;
     private String nickname;
-    private String uid;
+    @TableField(value = "userid")
+    private String userid;
     private String gender;
     private String contactPhone;
     private Boolean subAccount;
     private String imagePath;
     private String imageUrl;
+    private String relateAccountUid;
 }
