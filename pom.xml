@@ -10,9 +10,9 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.npc</groupId>
-	<artifactId>old-school</artifactId>
-	<version>0.0.3</version>
-	<name>old-school</name>
+	<artifactId>xibo</artifactId>
+	<version>1.0.4</version>
+	<name>xibo</name>
 	<description>Demo project for Spring Boot</description>
 	<url />
 	<licenses>

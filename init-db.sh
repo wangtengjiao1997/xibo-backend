@@ -2,13 +2,13 @@
 set -e
 # 创建用户
 psql -v ON_ERROR_STOP=1 --username "$POSTGRES_USER" <<-EOSQL
-    CREATE USER old_school WITH PASSWORD '123456';
+    CREATE USER xibo WITH PASSWORD '123456';
 EOSQL
 # 创建数据库
 psql -v ON_ERROR_STOP=1 --username "$POSTGRES_USER" <<-EOSQL
-    CREATE DATABASE old_school
+    CREATE DATABASE xibo
     WITH
-    OWNER = old_school
+    OWNER = xibo
     ENCODING = 'UTF8'
     LOCALE_PROVIDER = 'libc'
     CONNECTION LIMIT = -1

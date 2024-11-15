@@ -1,6 +1,6 @@
 spring:
   application:
-    name: old-school
+    name: xibo
     version: 0.1
   sql:
     init:
@@ -63,11 +63,11 @@ mybatis-plus:
       logic-delete-field: isDeleted  # 逻辑删除字段名
       logic-delete-value: true # 逻辑已删除值(默认为 1)
       logic-not-delete-value: false # 逻辑未删除值(默认为 0)
-  type-aliases-package: com.npc.old_school.entity
+  type-aliases-package: com.npc.xibo.entity
 server:
   port: 8081
 upload:
-  path: D:\Code\Java\old-school\logs\upload
+  path: D:\Code\Java\xibo\logs\upload
   max-size: 10485760 # 10MB
 
 springdoc:
@@ -79,4 +79,4 @@ springdoc:
     tags-sorter: alpha
     operations-sorter: alpha
   show-actuator: false
-  packages-to-scan: com.npc.old_school.controller
+  packages-to-scan: com.npc.xibo.controller

@@ -39,11 +39,11 @@
 
 ## 项目结构
 ```bash
-old-school/
+xibo/
 ├── src/
 │ ├── main/
 │ │ ├── java/
-│ │ │ └── com/npc/old_school/
+│ │ │ └── com/npc/xibo/
 │ │ │ ├── controller/ # 控制器层
 │ │ │ ├── service/ # 服务层
 │ │ │ ├── entity/ # 实体类
@@ -73,7 +73,7 @@ old-school/
   datasource:
     druid:
       driver-class-name: org.postgresql.Driver
-      url: jdbc:postgresql://192.168.23.112:5432/old_school?useSSL=false
+      url: jdbc:postgresql://192.168.23.112:5432/xibo?useSSL=false
       username: postgres
       password: 123456
 ```
@@ -93,7 +93,7 @@ docker-compose up -d
 
 ```yaml
 upload:
-  path: D:\Code\Java\old-school\logs\upload
+  path: D:\Code\Java\xibo\logs\upload
   max-size: 10485760 # 10MB
 ```
 
@@ -136,7 +136,7 @@ public enum ExceptionEnum implements BaseErrorInfomation {
 
 项目支持Docker部署，使用docker-compose进行容器编排，包含以下服务：
 
-- old-school: Spring Boot应用服务
+- xibo: Spring Boot应用服务
 - postgres: PostgreSQL数据库服务
 - nginx: 反向代理服务器
 
